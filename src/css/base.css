@@ -10,7 +10,8 @@ body {
   background-color: var(--background-color);
   font-family: 'Inter Tight', sans-serif;
   color: var(--text-color);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  overflow: auto;
 }
 
 .visually-hidden {
