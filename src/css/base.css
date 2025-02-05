@@ -36,9 +36,16 @@ html {
   scroll-behavior: smooth;
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 768px) {
   .section {
     padding-top: 96px;
     padding-bottom: 96px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .section {
+    padding-top: 164px;
+    padding-bottom: 164px;
   }
 }
