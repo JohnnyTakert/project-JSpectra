@@ -1,15 +1,15 @@
 :root {
-  --color1: #1c1d20;
-  --color2: #242527;
-  --color3: #3b3b3b;
-  --color4: #ed3b44;
-  --color5: #fafafa;
+  --background-color: #1c1d20;
+  --gradient-color: #242527;
+  --accent-color: #3b3b3b;
+  --fill-color: #ed3b44;
+  --text-color: #fafafa;
 }
 
 body {
-  background-color: var(--color1);
+  background-color: var(--background-color);
   font-family: 'Inter Tight', sans-serif;
-  color: var(--color5);
+  color: var(--text-color);
   overflow-x: hidden;
 }
 
@@ -28,8 +28,8 @@ body {
 }
 
 .section {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 html {
@@ -38,14 +38,14 @@ html {
 
 @media only screen and (min-width: 768px) {
   .section {
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .section {
-    padding-top: 164px;
-    padding-bottom: 164px;
+    padding-top: 82px;
+    padding-bottom: 82px;
   }
 }
