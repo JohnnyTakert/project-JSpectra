@@ -1,7 +1,15 @@
+:root {
+  --color1: #1c1d20;
+  --color2: #242527;
+  --color3: #3b3b3b;
+  --color4: #ed3b44;
+  --color5: #fafafa;
+}
+
 body {
-  background-color: #1c1d20;
+  background-color: var(--color1);
   font-family: 'Inter Tight', sans-serif;
-  color: #fafafa;
+  color: var(--color5);
   overflow-x: hidden;
 }
 
