@@ -9,11 +9,12 @@
       Let's&#160;<span class="footer-accent">work&#160;</span>together
     </h2>
 
-    <form class="work-together-form">
+    <form class="work-together-form js-work-together-form">
       <div class="email-field-wrapper">
         <input
-          type="email"
           class="input-field email-field"
+          type="email"
+          name="email"
           placeholder="clients@gmail.com"
           pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
           required
@@ -25,8 +26,9 @@
       </div>
 
       <input
-        type="text"
         class="input-field comment-field"
+        type="text"
+        name="comment"
         placeholder="comments"
         required
       />
