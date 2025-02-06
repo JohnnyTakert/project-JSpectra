@@ -16,13 +16,10 @@
           type="email"
           name="email"
           placeholder="clients@gmail.com"
+          autocomplete="off"
           pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
           required
         />
-        <div class="validation-message">
-          <p class="succes input-message">Succes!</p>
-          <p class="invalid input-message">Invalid email, try again</p>
-        </div>
       </div>
 
       <input
@@ -30,6 +27,7 @@
         type="text"
         name="comment"
         placeholder="comments"
+        autocomplete="off"
         required
       />
       <button type="submit" class="submit-btn">Send</button>
@@ -49,24 +47,19 @@
         </li>
       </ul>
     </address>
+  </div>
 
-    <!-- Modal -->
-    <div class="backdrop">
-      <div class="modal">
-        <button class="close-modal-btn" type="button">
-          <svg class="close-modal-icon">
-            <use href="../img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-        <div class="modal-message">
-          <h3 class="modal-title">
-            Thank you for your interest in cooperation!
-          </h3>
-          <p class="modal-text">
-            The manager will contact you shortly to discuss further details and
-            opportunities for cooperation. Please stay in touch.
-          </p>
-        </div>
+  <!-- Modal -->
+  <div class="modal-backdrop js-modal-backdrop">
+    <div class="modal">
+      <button class="close-modal-btn close-modal" type="button">
+        <svg class="close-modal-icon">
+          <use href="../img/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <div class="modal-message">
+        <h3 class="modal-title js-modal-title"></h3>
+        <p class="modal-text js-modal-text"></p>
       </div>
     </div>
   </div>

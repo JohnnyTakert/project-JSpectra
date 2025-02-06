@@ -63,7 +63,7 @@
   letter-spacing: -0.02em;
   color: inherit;
 
-  transition: border-bottom-color 500ms ease;
+  transition: border-bottom-color 450ms ease;
 }
 
 .comment-field {
@@ -82,30 +82,43 @@
   border-bottom-color: #e74a3b;
 }
 
-.input-message {
+.email-field-wrapper {
+  position: relative;
+}
+
+.email-field-wrapper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 4px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.28;
   letter-spacing: -0.02em;
+
   opacity: 0;
-  height: 0;
 }
 
-.input-message.succes {
+.email-field-wrapper:has(.email-field:not(:placeholder-shown):valid)::after {
+  content: 'Succes!';
   color: #3cbc81;
+  opacity: 1;
 }
-.input-message.invalid {
+.email-field-wrapper:has(.email-field:not(:placeholder-shown):invalid)::after {
+  content: 'Invalid email, try again';
   color: #e74a3b;
+  opacity: 1;
 }
 
-.email-field:not(:placeholder-shown):valid
-  + .validation-message
-  .input-message.succes,
-.email-field:not(:placeholder-shown):invalid
-  + .validation-message
-  .input-message.invalid {
-  opacity: 1;
-  height: auto;
+@media screen and (max-width: 767px) {
+  .email-field-wrapper:has(.email-field:not(:placeholder-shown):valid)
+    + .comment-field,
+  .email-field-wrapper:has(.email-field:not(:placeholder-shown):invalid)
+    + .comment-field {
+    margin-top: 32px;
+  }
 }
 
 .submit-btn {
@@ -121,7 +134,7 @@
   letter-spacing: -0.02em;
   color: var(--text-color);
 
-  transition: background-color 500ms ease;
+  transition: background-color 450ms ease;
 }
 
 .contacts-list {
@@ -141,7 +154,7 @@
   color: var(--text-color);
   font-style: normal;
 
-  transition: border-color 500ms ease;
+  transition: border-color 450ms ease;
 }
 
 @media only screen and (min-width: 768px) {
@@ -174,11 +187,6 @@
     flex-direction: row;
     margin-bottom: 18px;
     align-items: center;
-  }
-
-  .email-field-wrapper {
-    display: flex;
-    flex-direction: column;
   }
 
   .input-field {
@@ -245,7 +253,7 @@
 }
 
 /* ============== Modal styles ================ */
-.backdrop {
+.modal-backdrop {
   position: absolute;
   top: 0;
   left: 0;
@@ -264,7 +272,7 @@
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-open {
+.modal-backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;

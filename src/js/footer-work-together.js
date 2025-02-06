@@ -1,6 +1,12 @@
 import axios from 'axios';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
-const formEl = document.querySelector('.js-work-together-form');
+const refs = {
+  formEl: document.querySelector('.js-work-together-form'),
+  modalEl: document.querySelector('.js-modal-backdrop'),
+  closeModalBtn: document.querySelector('.close-modal'),
+};
 
 function postData(userEmail, userComment) {
   return axios.post('https://portfolio-js.b.goit.study/api/requests', {
@@ -18,12 +24,39 @@ async function onFormSubmit(e) {
   } = e.currentTarget.elements;
 
   try {
-  } catch (err) {
-    console.log(err);
-  }
+    const {
+      data: { title, message },
+    } = await postData(emailVal, commentVal);
 
-  const responce = await postData(emailVal, commentVal);
-  console.log(responce);
+    document.querySelector('.js-modal-title').textContent = title;
+    document.querySelector('.js-modal-text').textContent = message;
+
+    openModal();
+
+    refs.formEl.reset();
+  } catch (err) {
+    iziToast.info({
+      title: err.name,
+      message: err.message,
+      backgroundColor: '#ed3b44',
+      theme: 'dark',
+    });
+  }
 }
 
-formEl.addEventListener('submit', onFormSubmit);
+function openModal() {
+  refs.modalEl.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  refs.modalEl.classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+
+refs.formEl.addEventListener('submit', onFormSubmit);
+refs.closeModalBtn.addEventListener('click', closeModal);
+refs.modalEl.addEventListener('click', closeModal);
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
