@@ -53,7 +53,7 @@
   width: 343px;
   background-color: transparent;
   padding-bottom: 20px;
-  outline: none;
+  outline: transparent;
   border: none;
   border-bottom: 1px solid #fafafa33;
 
@@ -142,11 +142,12 @@
   column-gap: 4px;
 }
 
-.contacts-item {
+.contacts-link {
   border: 1px solid #fafafa33;
   border-radius: 60px;
   padding: 10px 12px;
   max-width: 178px;
+  outline: transparent;
 
   font-weight: 500;
   font-size: 14px;
@@ -208,21 +209,22 @@
   .submit-btn:hover,
   .submit-btn:focus {
     background-color: #e0373f;
+    outline: transparent;
   }
 
   .contacts-list {
     column-gap: 8px;
   }
 
-  .contacts-item {
+  .contacts-link {
     padding: 18px 32px;
     max-width: 239px;
 
     font-size: 16px;
   }
 
-  .contacts-item:hover,
-  .contacts-item:focus {
+  .contacts-link:hover,
+  .contacts-link:focus {
     border-color: var(--text-color);
   }
 }
