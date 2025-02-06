@@ -1,6 +1,6 @@
 /* ============== Footer styles ================ */
 .page-footer {
-  background-image: url(./img/footer-bg/footer-bg-mob.png);
+  background-image: url(../img/footer-bg/footer-bg-mob.png);
   background-repeat: no-repeat;
   background-position: right;
 
@@ -14,7 +14,7 @@
 
 @media screen and (max-width: 767px) and (min-resolution: 192dpi) {
   .page-footer {
-    background-image: url(./img/footer-bg/footer-bg-mob@2x.png);
+    background-image: url(../img/footer-bg/footer-bg-mob@2x.png);
   }
 }
 
@@ -162,12 +162,12 @@
   .page-footer {
     padding-top: 80px;
     padding-bottom: 169px;
-    background-image: url(./img/footer-bg/footer-bg-tablet.png);
+    background-image: url(../img/footer-bg/footer-bg-tablet.png);
   }
 
   @media screen and (max-width: 1439px) and (min-resolution: 192dpi) {
     .page-footer {
-      background-image: url(./img/footer-bg/footer-bg-tablet@2x.png);
+      background-image: url(../img/footer-bg/footer-bg-tablet@2x.png);
     }
   }
 
@@ -231,7 +231,7 @@
 
 @media only screen and (min-width: 1440px) {
   .page-footer {
-    background-image: url(./img/footer-bg/footer-bg-desktop.png);
+    background-image: url(../img/footer-bg/footer-bg-desktop.png);
   }
 
   .footer-container {
@@ -241,7 +241,7 @@
 
   @media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
     .page-footer {
-      background-image: url(./img/footer-bg/footer-bg-desktop@2x.png);
+      background-image: url(../img/footer-bg/footer-bg-desktop@2x.png);
     }
   }
 
