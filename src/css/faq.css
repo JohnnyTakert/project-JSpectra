@@ -1,0 +1,44 @@
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ac {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ac-header {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  padding: 16px 20px;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: inherit;
+}
+
+.ac-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  text-align: left;
+}
+
+.ac-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding: 0 20px; /* Залишимо padding для зручності */
+}
+
+.ac-header.is-active + .ac-panel {
+  max-height: 500px; /* Встановлюємо максимальну висоту для панелі */
+  padding: 15px 20px; /* Збільшуємо padding, щоб текст був видимий */
+}
