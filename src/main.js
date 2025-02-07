@@ -1,4 +1,4 @@
-import './js/header';
+import './js/header.js';
 import './js/hero';
 import './js/about-me';
 import './js/projects';
