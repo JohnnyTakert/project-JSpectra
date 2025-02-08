@@ -4,6 +4,8 @@
   --accent-color: #3b3b3b;
   --fill-color: #ed3b44;
   --text-color: #fafafa;
+  --text-color2: rgba(250, 250, 250, 0.6);
+  --title-color: rgba(250, 250, 250, 0.4);
 }
 
 body {

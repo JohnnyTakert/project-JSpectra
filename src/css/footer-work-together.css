@@ -72,7 +72,7 @@
 }
 
 .input-field:placeholder-shown {
-  color: #fafafa99;
+  color: var(--text-color2);
 }
 
 .email-field:not(:placeholder-shown):valid {
