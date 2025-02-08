@@ -167,6 +167,8 @@
   opacity: 0;
   transform: translateY(-10px);
   transition: max-height 0.45s ease, opacity 0.45s ease, transform 0.45s ease;
+  display: flex;
+  gap: 32px;
 }
 
 .accordion-item {

@@ -35,6 +35,7 @@ accordionItems.forEach(item => {
 });
 
 // Swiper
+
 import Swiper from 'swiper';
 import 'swiper/css';
 
