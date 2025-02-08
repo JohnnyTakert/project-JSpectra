@@ -1,41 +1,20 @@
-import pathSprite from '../img/sprite.svg';
-
 const accordionItems = document.querySelectorAll('.accordion-item');
-
-const toggleAccordionContent = item => {
-  const content = item.querySelector('.accordion-content');
-  if (item.classList.contains('active')) {
-    content.style.maxHeight = content.scrollHeight + 'px';
-    content.style.opacity = '1';
-    content.style.transform = 'translateY(0)';
-  } else {
-    content.style.maxHeight = '0';
-    content.style.opacity = '0';
-    content.style.transform = 'translateY(-10px)';
-  }
-};
 
 accordionItems.forEach(item => {
   const header = item.querySelector('.accordion-header');
-
   header.addEventListener('click', () => {
     item.classList.toggle('active');
-    toggleAccordionContent(item);
 
-    const icon = header.querySelector('svg use');
-    icon.setAttribute(
-      'href',
-      item.classList.contains('active')
-        ? `${pathSprite}#icon-arrow-up`
-        : `${pathSprite}#icon-arrow-down`
-    );
+    const icon = header.querySelector('.icon-container');
+    if (item.classList.contains('active')) {
+      icon.style.transform = 'rotate(0deg)'; // Стрелка вверх
+    } else {
+      icon.style.transform = 'rotate(180deg)'; // Стрелка вниз
+    }
   });
-
-  toggleAccordionContent(item);
 });
 
 // Swiper
-
 import Swiper from 'swiper';
 import 'swiper/css';
 
