@@ -1,3 +1,5 @@
+import pathSprite from '../img/sprite.svg';
+
 const accordionItems = document.querySelectorAll('.accordion-item');
 
 accordionItems.forEach(item => {
@@ -10,8 +12,8 @@ accordionItems.forEach(item => {
     icon.setAttribute(
       'xlink:href',
       item.classList.contains('active')
-        ? '/img/sprite.svg#icon-arrow-up'
-        : '/img/sprite.svg#icon-arrow-down'
+        ? `${pathSprite}#icon-arrow-up`
+        : `${pathSprite}#icon-arrow-down`
     );
   });
 
