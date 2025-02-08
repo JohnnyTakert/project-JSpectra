@@ -1,0 +1,115 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1d20;
+  background-repeat: repeat-y;
+  background-position: left top;
+  background-size: 412px;
+  z-index: 1111;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-100%);
+  transition: opacity 450ms ease, visibility 450ms ease, transform 450ms ease;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .mobile-menu {
+    background-color: #1c1d20;
+  }
+}
+
+.mobile-menu.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.menu-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 302px 0 64px;
+}
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.mobile-button {
+  position: absolute;
+  top: 32px;
+  right: 16px;
+  background: transparent;
+  border: none;
+}
+
+.mobile-close-button {
+  stroke: #fafafa;
+}
+
+.mob-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mob-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 450ms ease, visibility 450ms ease;
+}
+
+.mob-menu-item {
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 450ms ease;
+}
+
+.mob-menu-item:hover,
+.mob-menu-item:focus {
+  color: #ed3b44;
+}
+
+.mob-order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  background-color: #ed3b44;
+  padding: 14px 31px;
+  min-width: 164px;
+  height: 45px;
+  font-weight: 500;
+  font-size: 14px;
+  opacity: 1;
+  visibility: visible;
+  margin-left: auto;
+  margin-right: auto;
+  transition: opacity 450ms ease, visibility 450ms ease,
+    background-color 450ms ease;
+}
+
+.mob-order:hover,
+.mob-order:focus {
+  background-color: #e0373f;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
