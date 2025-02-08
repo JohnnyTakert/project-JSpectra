@@ -2,16 +2,22 @@ import pathSprite from '../img/sprite.svg';
 
 const accordionItems = document.querySelectorAll('.accordion-item');
 
-// Функція для оновлення відображення вмісту аккордеону
 const toggleAccordionContent = item => {
   const content = item.querySelector('.accordion-content');
-  content.style.display = item.classList.contains('active') ? 'flex' : 'none';
+  if (item.classList.contains('active')) {
+    content.style.maxHeight = content.scrollHeight + 'px';
+    content.style.opacity = '1';
+    content.style.transform = 'translateY(0)';
+  } else {
+    content.style.maxHeight = '0';
+    content.style.opacity = '0';
+    content.style.transform = 'translateY(-10px)';
+  }
 };
 
 accordionItems.forEach(item => {
   const header = item.querySelector('.accordion-header');
 
-  // Обробник для активації/деактивації аккордеону
   header.addEventListener('click', () => {
     item.classList.toggle('active');
     toggleAccordionContent(item);
@@ -25,16 +31,18 @@ accordionItems.forEach(item => {
     );
   });
 
-  // Ініціалізація початкового стану аккордеону
   toggleAccordionContent(item);
 });
 
 // Swiper
+import Swiper from 'swiper';
+import 'swiper/css';
+
 const swiper = new Swiper('.swiper-container', {
   spaceBetween: 0,
   loop: true,
   navigation: {
-    nextEl: '.swiper-button-next',
+    nextEl: '.skills-but',
   },
   keyboard: {
     enabled: true,
@@ -61,6 +69,6 @@ swiper.on('slideChange', () => {
   });
 });
 
-document.querySelector('.skills-but').addEventListener('click', function () {
+document.querySelector('.skills-but').addEventListener('click', () => {
   swiper.slideNext();
 });
