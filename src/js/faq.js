@@ -1,10 +1,9 @@
 import Accordion from 'accordion-js';
-// import 'accordion-js/dist/accordion.min.css';
 
 document.addEventListener('DOMContentLoaded', function () {
   new Accordion('.faq-list', {
-    duration: 450, // час анімації
-    showMultiple: true, // відкривається тільки один елемент
+    duration: 450,
+    showMultiple: true,
     elementClass: 'ac',
     triggerClass: 'ac-trigger',
     panelClass: 'ac-panel',

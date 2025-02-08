@@ -129,15 +129,15 @@
 @media only screen and (min-width: 1440px) {
   .faq-list {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* два стовпці */
-    gap: 0px; /* відстань між елементами */
-    grid-auto-flow: row dense; /* заповнення рядків сітки з щільністю */
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    grid-auto-flow: row dense;
   }
 
   .ac:nth-child(1),
   .ac:nth-child(2),
   .ac:nth-child(3) {
-    grid-column: 1; /* перші три елементи в першому стовпці */
+    grid-column: 1;
     padding-right: 32px;
     border-right: 2px solid rgba(250, 250, 250, 0.2);
   }
@@ -145,7 +145,7 @@
   .ac:nth-child(4),
   .ac:nth-child(5),
   .ac:nth-child(6) {
-    grid-column: 2; /* наступні три елементи в другому стовпці */
+    grid-column: 2;
     padding-left: 32px;
   }
 

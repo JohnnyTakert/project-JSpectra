@@ -1,16 +1,17 @@
 /* .about-me */
-.about-me .container {
+
+.about-me {
   padding: 64px 16px;
 }
 
 @media (min-width: 768px) {
-  .about-me .container {
+  .about-me {
     padding: 64px 32px;
   }
 }
 
 @media (min-width: 1440px) {
-  .about-me .container {
+  .about-me {
     padding: 96px 32px;
   }
 }
@@ -133,6 +134,7 @@
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: var(--title-color);
+  transition: 450ms ease;
 }
 
 .icon-container {
@@ -142,6 +144,7 @@
   width: 36px;
   height: 36px;
   transform: rotate(-180deg);
+  transition: 450ms ease;
 }
 
 .icon-accordion {
@@ -159,6 +162,11 @@
   gap: 32px;
   flex-direction: column;
   margin-top: 12px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.45s ease, opacity 0.45s ease, transform 0.45s ease;
 }
 
 .accordion-item {
@@ -235,6 +243,7 @@
   text-align: center;
   align-content: center;
   line-height: 130px;
+  transition: 450ms ease;
 }
 
 .skills-item.active {
@@ -260,6 +269,10 @@
   .skills-swiper {
     max-width: 600px;
     height: 200px;
+  }
+  .skills-but svg {
+    width: 40px;
+    height: 40px;
   }
 }
 
