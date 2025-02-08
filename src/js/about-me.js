@@ -1,3 +1,5 @@
+import pathSprite from '../img/sprite.svg';
+
 const accordionItems = document.querySelectorAll('.accordion-item');
 
 accordionItems.forEach(item => {
@@ -8,10 +10,10 @@ accordionItems.forEach(item => {
     content.style.display = item.classList.contains('active') ? 'flex' : 'none';
     const icon = header.querySelector('svg use');
     icon.setAttribute(
-      'xlink:href',
+      'href',
       item.classList.contains('active')
-        ? '/img/sprite.svg#icon-arrow-up'
-        : '/img/sprite.svg#icon-arrow-down'
+        ? `${pathSprite}#icon-arrow-up`
+        : `${pathSprite}#icon-arrow-down`
     );
   });
 
@@ -44,6 +46,10 @@ const swiper = new Swiper('.swiper-container', {
     768: { slidesPerView: 3 },
     1440: { slidesPerView: 6 },
   },
+});
+
+document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+  slide.classList.toggle('active', index === swiper.activeIndex);
 });
 
 swiper.on('slideChange', () => {
