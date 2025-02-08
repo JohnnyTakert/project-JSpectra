@@ -6,6 +6,7 @@
   --text-color: #fafafa;
   --text-color2: rgba(250, 250, 250, 0.6);
   --title-color: rgba(250, 250, 250, 0.4);
+  --gradient-color: rgba(237, 59, 68, 0.6);
 }
 
 body {
