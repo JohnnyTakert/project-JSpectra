@@ -2,12 +2,20 @@ import pathSprite from '../img/sprite.svg';
 
 const accordionItems = document.querySelectorAll('.accordion-item');
 
+// Функція для оновлення відображення вмісту аккордеону
+const toggleAccordionContent = item => {
+  const content = item.querySelector('.accordion-content');
+  content.style.display = item.classList.contains('active') ? 'flex' : 'none';
+};
+
 accordionItems.forEach(item => {
   const header = item.querySelector('.accordion-header');
+
+  // Обробник для активації/деактивації аккордеону
   header.addEventListener('click', () => {
     item.classList.toggle('active');
-    const content = item.querySelector('.accordion-content');
-    content.style.display = item.classList.contains('active') ? 'flex' : 'none';
+    toggleAccordionContent(item);
+
     const icon = header.querySelector('svg use');
     icon.setAttribute(
       'href',
@@ -17,13 +25,8 @@ accordionItems.forEach(item => {
     );
   });
 
-  if (item.classList.contains('active')) {
-    const content = item.querySelector('.accordion-content');
-    content.style.display = 'flex';
-  } else {
-    const content = item.querySelector('.accordion-content');
-    content.style.display = 'none';
-  }
+  // Ініціалізація початкового стану аккордеону
+  toggleAccordionContent(item);
 });
 
 // Swiper
