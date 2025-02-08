@@ -3,7 +3,7 @@ import Accordion from 'accordion-js';
 
 document.addEventListener('DOMContentLoaded', function () {
   new Accordion('.faq-list', {
-    duration: 300, // час анімації
+    duration: 450, // час анімації
     showMultiple: true, // відкривається тільки один елемент
     elementClass: 'ac',
     triggerClass: 'ac-trigger',

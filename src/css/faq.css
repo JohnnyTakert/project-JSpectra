@@ -35,8 +35,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  margin-bottom: 16px;
 }
 
 .ac-trigger {
@@ -55,7 +53,12 @@
   justify-content: space-between;
 
   position: relative;
-  transition: max-height 450ms ease-out, padding 450ms ease-out;
+
+  padding: 0px;
+}
+
+.ac-trigger-title {
+  max-width: 289px;
 }
 
 .faq-icon-wrapper {
@@ -69,18 +72,20 @@
   height: 40px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 100px;
-  transition: max-height 450ms ease-out, padding 450ms ease-out;
 }
 
 .faq-icon {
   fill: var(--text-color);
-  transition: max-height 450ms ease-out, padding 450ms ease-out;
+  transition: 450;
 }
 
 .ac-panel {
   height: 0;
   overflow: hidden;
-  transition: max-height 450ms ease-out, padding 450ms ease-out;
+}
+
+.ac-content {
+  padding-top: 16px;
 }
 
 .ac-content {
@@ -105,8 +110,16 @@
     padding-bottom: 24px;
   }
 
-  .ac-header {
-    margin-bottom: 26px;
+  .ac-content {
+    padding-top: 26px;
+  }
+
+  .ac-trigger-title {
+    max-width: 574px;
+  }
+
+  .ac:last-child .ac-trigger-title {
+    max-width: 485px;
   }
 
   .ac-content {
@@ -125,14 +138,20 @@
   .ac:nth-child(2),
   .ac:nth-child(3) {
     grid-column: 1; /* перші три елементи в першому стовпці */
+    padding-right: 32px;
+    border-right: 2px solid rgba(250, 250, 250, 0.2);
   }
 
   .ac:nth-child(4),
   .ac:nth-child(5),
   .ac:nth-child(6) {
     grid-column: 2; /* наступні три елементи в другому стовпці */
+    padding-left: 32px;
   }
 
+  .ac:nth-child(4) {
+    border-top: 2px solid rgba(250, 250, 250, 0.2);
+  }
   .ac {
     padding-bottom: 26px;
   }
