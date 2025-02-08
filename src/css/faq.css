@@ -1,6 +1,6 @@
 .faq-title {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.02em;
   color: var(--title-color);
@@ -76,7 +76,7 @@
 
 .faq-icon {
   fill: var(--text-color);
-  transition: 450;
+  transition: background-color 450ms ease;
 }
 
 .ac-panel {
