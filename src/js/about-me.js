@@ -10,7 +10,7 @@ accordionItems.forEach(item => {
     content.style.display = item.classList.contains('active') ? 'flex' : 'none';
     const icon = header.querySelector('svg use');
     icon.setAttribute(
-      'xlink:href',
+      'href',
       item.classList.contains('active')
         ? `${pathSprite}#icon-arrow-up`
         : `${pathSprite}#icon-arrow-down`
@@ -46,6 +46,10 @@ const swiper = new Swiper('.swiper-container', {
     768: { slidesPerView: 3 },
     1440: { slidesPerView: 6 },
   },
+});
+
+document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+  slide.classList.toggle('active', index === swiper.activeIndex);
 });
 
 swiper.on('slideChange', () => {
