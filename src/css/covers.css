@@ -1,0 +1,88 @@
+ .covers-section {
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden; 
+    background: radial-gradient(circle 350px at 0% 10%, var(--gradient-color), transparent 100%),
+                radial-gradient(circle 350px at 100% 100%, var(--gradient-color), transparent 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    }
+    .covers-content-wrapper{
+    position: relative;
+  }
+  .covers-marquee {
+    position: absolute;
+    right: -800px;
+    left: 0;
+    overflow: hidden;
+  }
+  
+  .covers-marquee-inner {
+     height: 100%;
+     display: flex;
+     transform: rotate(16deg);
+  }
+
+  .covers-marquee:nth-child(1) {
+    top: -180px;
+}
+
+.covers-marquee-line {
+    flex-shrink: 0;
+    margin-right: 22px; 
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 4.7); 
+    white-space: nowrap;
+    animation-name: marqueeLine;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.covers-marquee-img{
+  width: 282.29px;
+}
+
+@keyframes marqueeLine {
+    from {
+      transform: translateX(-20%);
+    }
+    
+    to {
+      transform: translateX(-180%);
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .covers-section {
+      min-height: 960px;
+      background: radial-gradient(circle 350px at 10% 20%, var(--gradient-color), transparent 100%),
+      radial-gradient(circle 350px at 100% 80%, var(--gradient-color), transparent 100%);}
+      .covers-marquee:nth-child(1) {
+        top: -400px;
+    }
+    .covers-marquee-line {
+      margin-right: 50px; 
+      margin-top: 50px;
+      width: calc(100% / 3.2); 
+    }
+  }
+  
+  @media only screen and (min-width: 1440px) {
+    .covers-section {
+      background: radial-gradient(circle 350px at 10% 45%, var(--gradient-color), transparent 60%),
+                radial-gradient(circle 350px at 35% 15%, var(--gradient-color), transparent 60%),
+                radial-gradient(circle 350px at 90% 80%, var(--gradient-color), transparent 60%);
+  }
+  .covers-marquee:nth-child(1) {
+      top: -350px;
+    }
+  .covers-marquee-line {
+    margin-right: 55px; 
+    margin-top: 55px;     
+    width: calc(100% / 4.6); 
+    }  
+  }
