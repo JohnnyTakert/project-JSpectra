@@ -24,7 +24,7 @@ accordionItems.forEach(item => {
   }
 });
 
-// Инициализация Swiper
+// Swiper
 const swiper = new Swiper('.swiper-container', {
   spaceBetween: 0,
   loop: true,
@@ -33,28 +33,25 @@ const swiper = new Swiper('.swiper-container', {
   },
   keyboard: {
     enabled: true,
+    onlyInViewport: false,
   },
+  mousewheel: {
+    invert: false,
+  },
+  touchEventsTarget: 'container',
   breakpoints: {
-    320: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 3,
-    },
-    1024: {
-      slidesPerView: 6,
-    },
+    320: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },
+    1440: { slidesPerView: 6 },
   },
 });
 
-// Добавление активного класса при смене слайда
 swiper.on('slideChange', () => {
-  document
-    .querySelectorAll('.swiper-slide')
-    .forEach(slide =>
-      slide.classList.toggle(
-        'active',
-        slide === document.querySelectorAll('.swiper-slide')[swiper.activeIndex]
-      )
-    );
+  document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+    slide.classList.toggle('active', index === swiper.activeIndex);
+  });
+});
+
+document.querySelector('.skills-but').addEventListener('click', function () {
+  swiper.slideNext();
 });

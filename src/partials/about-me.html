@@ -1,4 +1,4 @@
-<section class="about-me" id="about-me">
+<section class="about-me container section" id="about-me">
   <h2 class="visually-hidden">About Me</h2>
   <div class="text-image">
     <h3 class="about-me-discription">
@@ -107,33 +107,27 @@
   </div>
 
   <div class="skills-container">
-    <div class="swiper-container swiper">
-      <ul class="swiper-wrapper">
-        <li class="swiper-slide">HTML/CSS</li>
-        <li class="swiper-slide">JavaScript</li>
-        <li class="swiper-slide">React</li>
-        <li class="swiper-slide">Node. js</li>
-        <li class="swiper-slide">React Native</li>
-        <li class="swiper-slide">Soft skills</li>
-        <li class="swiper-slide">HTML/CSS</li>
-        <li class="swiper-slide">JavaScript</li>
-        <li class="swiper-slide">React</li>
-        <li class="swiper-slide">Node. js</li>
-        <li class="swiper-slide">React Native</li>
-        <li class="swiper-slide">Soft skills</li>
+    <div class="skills-swiper swiper-container swiper">
+      <ul class="skills-list swiper-wrapper">
+        <li class="skills-item swiper-slide active">HTML/CSS</li>
+        <li class="skills-item swiper-slide">JavaScript</li>
+        <li class="skills-item swiper-slide">React</li>
+        <li class="skills-item swiper-slide">Node. js</li>
+        <li class="skills-item swiper-slide">React Native</li>
+        <li class="skills-item swiper-slide">Soft skills</li>
+        <li class="skills-item swiper-slide">Git Hub</li>
       </ul>
-      <!-- Стрелки для навигации -->
-      <div class="swiper-button-next">
-        <svg width="28" height="28">
-          <use xlink:href="/src/img/sprite.svg#icon-arrow-right"></use>
-        </svg>
-      </div>
+    </div>
+    <div class="skills-but">
+      <svg width="28" height="28">
+        <use xlink:href="/img/sprite.svg#icon-arrow-right"></use>
+      </svg>
     </div>
   </div>
 </section>
 
-<!-- Стили Swiper -->
+<!-- Swiper Styles -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-<!-- Скрипт Swiper -->
+<!-- Swiper Script -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
