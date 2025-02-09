@@ -1,4 +1,8 @@
 .mobile-menu {
+  background-image: image-set(
+    url('/img/hero-bg/hero-bg-mob.png'),
+    url('/img/hero-bg/hero-bg-mob@2x.png')
+  );
   position: fixed;
   top: 0;
   left: 0;
