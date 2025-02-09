@@ -129,7 +129,6 @@
 .accordion-item {
   position: relative;
   padding: 20px 0;
-  border-bottom: 2px var(--border-light);
 }
 
 .accordion-header {
@@ -144,7 +143,9 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.02em;
+  text-transform: uppercase;
   color: var(--title-color);
+  transition: 0.45s ease-in-out;
 }
 
 .icon-container {
@@ -155,6 +156,15 @@
   height: 36px;
 }
 
+.icon-accordion {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.45s ease-in-out;
+}
+
+.accordion-item.is-active .icon-accordion {
+  transform: rotate(180deg);
+}
 .accordion-content {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
@@ -166,8 +176,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  max-height: 1000px;
-  transition: max-height 0.45s ease-in-out;
+  padding-top: 12px;
 }
 
 .accordion-item::after {
@@ -177,8 +186,7 @@
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="343" height="2" viewBox="0 0 343 2" fill="none"><path d="M0 1H343" stroke="%23FAFAFA" stroke-opacity="0.2" stroke-width="1"/></svg>')
-    no-repeat center;
+  background-color: var(--border-light);
   background-size: cover;
 }
 
@@ -214,24 +222,31 @@
   }
 }
 
-.icon-accordion {
-  transition: transform 0.45s ease-in-out;
-}
-.accordion-item.is-active .icon-accordion {
-  transform: rotate(180deg);
-}
-
 /* swiper */
+
 .skills-container {
-  margin-top: 32px;
+  padding-top: 32px;
   display: flex;
   align-items: center;
-  gap: 64px;
+  justify-content: flex-start;
 }
 
-.skills-swiper {
-  flex-grow: 1;
+.swiper-container {
+  max-width: 260px;
+  width: 100%;
   height: 130px;
+  padding: 0;
+}
+
+/* Перебиваем стандартные стили Swiper */
+.swiper-container {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.skills-list {
+  height: 130px;
+  width: 260px;
 }
 
 .skills-item {
@@ -246,37 +261,32 @@
   text-align: center;
   align-content: center;
   line-height: 130px;
+  max-width: 130px;
 }
 
 .skills-item.active {
   background-color: var(--fill-color);
 }
 
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
-  display: none;
-}
-
 .skills-but {
   stroke: var(--accent-color);
   fill: none;
-}
-
-@media (width: 320px) {
-  .skills-container {
-    gap: 0;
-  }
+  margin-left: auto;
 }
 
 @media (min-width: 768px) {
   .skills-container {
-    margin-top: 64px;
+    padding-top: 64px;
+  }
+  .skills-item {
+    max-width: 200px;
   }
 
-  .skills-swiper {
+  .swiper-container {
     max-width: 600px;
     height: 200px;
   }
+
   .skills-but svg {
     width: 40px;
     height: 40px;
@@ -285,11 +295,11 @@
 
 @media (min-width: 1440px) {
   .skills-container {
-    margin-top: 96px;
-    padding: 0 32px;
-    gap: 72px;
+    padding: 96px 32px;
   }
-  .skills-swiper {
+
+  .swiper-container {
     max-width: 1200px;
+    height: 200px;
   }
 }

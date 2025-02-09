@@ -3,7 +3,7 @@ import Accordion from 'accordion-js';
 document.addEventListener('DOMContentLoaded', function () {
   new Accordion('.accordion-container', {
     duration: 450,
-    showFirstItem: true,
+    openOnInit: [0],
     showMultiple: true,
     elementClass: 'accordion-item',
     triggerClass: 'accordion-header',
@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Swiper
 import Swiper from 'swiper';
-import 'swiper/css';
 
 const swiper = new Swiper('.swiper-container', {
   spaceBetween: 0,
@@ -28,7 +27,7 @@ const swiper = new Swiper('.swiper-container', {
   mousewheel: {
     invert: false,
   },
-  touchEventsTarget: 'container',
+  touchEventsTarget: 'swiper-container',
   breakpoints: {
     320: { slidesPerView: 2 },
     768: { slidesPerView: 3 },
