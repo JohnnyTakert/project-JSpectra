@@ -77,6 +77,11 @@
   background-color: #e0373f;
 }
 
+.projects-img-container {
+  background-color: #242527;
+  border-radius: 0 0 24px 24px;
+}
+
 .projects-image {
   padding: 100px 0;
   margin: auto;
@@ -99,13 +104,9 @@
   margin-right: 12px;
 }
 
-.btn-prev:disabled,
-.btn-next:disabled {
-  opacity: 0.3;
-}
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
-  display: none;
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .btn-icons {

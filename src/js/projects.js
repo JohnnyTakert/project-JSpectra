@@ -1,5 +1,5 @@
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import Swiper from 'swiper';
+import 'swiper/css';
 
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
@@ -21,8 +21,8 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-const prevButton = document.querySelector('.btn-prev');
-const nextButton = document.querySelector('.btn-next');
+const prevButton = document.querySelector('.swiper-button-prev');
+const nextButton = document.querySelector('.swiper-button-next');
 
 nextButton.addEventListener('click', function () {
   swiper.slideNext();
@@ -50,3 +50,5 @@ function updateButtons(swiper) {
     nextButton.removeAttribute('disabled');
   }
 }
+
+updateButtons(swiper);
