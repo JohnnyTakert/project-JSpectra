@@ -282,7 +282,9 @@
 
 @media (min-width: 1440px) {
   .skills-container {
-    padding: 96px 32px;
+    padding-top: 96px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .swiper-container {
