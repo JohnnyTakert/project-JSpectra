@@ -1,18 +1,18 @@
 /* .about-me */
 
 .about-me {
-  padding: 64px 16px;
+  padding: 64px 0px;
 }
 
 @media (min-width: 768px) {
   .about-me {
-    padding: 64px 32px;
+    padding: 64px 0px;
   }
 }
 
 @media (min-width: 1440px) {
   .about-me {
-    padding: 96px 32px;
+    padding: 96px px;
   }
 }
 
@@ -121,10 +121,15 @@
 
 /* accordion */
 
-.accordion {
-  list-style-type: none;
+.accordion-container {
   padding: 0;
   margin: 0;
+}
+
+.accordion-item {
+  position: relative;
+  padding: 20px 0;
+  border-bottom: 2px var(--border-light);
 }
 
 .accordion-header {
@@ -139,9 +144,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.02em;
-  text-transform: uppercase;
   color: var(--title-color);
-  transition: 450ms ease;
 }
 
 .icon-container {
@@ -150,13 +153,6 @@
   padding: 9px;
   width: 36px;
   height: 36px;
-  transform: rotate(-180deg);
-  transition: 450ms ease;
-}
-
-.icon-accordion {
-  width: 18px;
-  height: 18px;
 }
 
 .accordion-content {
@@ -167,20 +163,11 @@
   letter-spacing: -0.02em;
   color: var(--text-color);
   gap: 32px;
-  flex-direction: column;
-  margin-top: 12px;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: max-height 0.45s ease, opacity 0.45s ease, transform 0.45s ease;
   display: flex;
-  gap: 32px;
-}
-
-.accordion-item {
-  position: relative;
-  padding: 20px 0;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height 0.45s ease-in-out;
 }
 
 .accordion-item::after {
@@ -193,16 +180,6 @@
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="343" height="2" viewBox="0 0 343 2" fill="none"><path d="M0 1H343" stroke="%23FAFAFA" stroke-opacity="0.2" stroke-width="1"/></svg>')
     no-repeat center;
   background-size: cover;
-}
-
-.accordion-item.active .accordion-content {
-  max-height: 500px;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.accordion-header.active .icon-container {
-  transform: rotate(0deg);
 }
 
 @media (min-width: 768px) {
@@ -237,6 +214,13 @@
   }
 }
 
+.icon-accordion {
+  transition: transform 0.45s ease-in-out;
+}
+.accordion-item.is-active .icon-accordion {
+  transform: rotate(180deg);
+}
+
 /* swiper */
 .skills-container {
   margin-top: 32px;
@@ -262,7 +246,6 @@
   text-align: center;
   align-content: center;
   line-height: 130px;
-  transition: 450ms ease;
 }
 
 .skills-item.active {
@@ -302,7 +285,8 @@
 
 @media (min-width: 1440px) {
   .skills-container {
-    margin: 96px 32px;
+    margin-top: 96px;
+    padding: 0 32px;
     gap: 72px;
   }
   .skills-swiper {

@@ -1,16 +1,13 @@
-const accordionItems = document.querySelectorAll('.accordion-item');
+import Accordion from 'accordion-js';
 
-accordionItems.forEach(item => {
-  const header = item.querySelector('.accordion-header');
-  header.addEventListener('click', () => {
-    item.classList.toggle('active');
-
-    const icon = header.querySelector('.icon-container');
-    if (item.classList.contains('active')) {
-      icon.style.transform = 'rotate(0deg)'; // Стрелка вверх
-    } else {
-      icon.style.transform = 'rotate(180deg)'; // Стрелка вниз
-    }
+document.addEventListener('DOMContentLoaded', function () {
+  new Accordion('.accordion-container', {
+    duration: 450,
+    showFirstItem: true,
+    showMultiple: true,
+    elementClass: 'accordion-item',
+    triggerClass: 'accordion-header',
+    panelClass: 'accordion-content',
   });
 });
 
