@@ -144,6 +144,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.02em;
+  text-transform: uppercase;
   color: var(--title-color);
 }
 
@@ -155,6 +156,15 @@
   height: 36px;
 }
 
+.icon-accordion {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.45s ease-in-out;
+}
+
+.accordion-item.is-active .icon-accordion {
+  transform: rotate(180deg);
+}
 .accordion-content {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
@@ -166,8 +176,9 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  max-height: 1000px;
+  max-height: auto;
   transition: max-height 0.45s ease-in-out;
+  padding-top: 12px;
 }
 
 .accordion-item::after {
@@ -212,13 +223,6 @@
   .accordion-item {
     padding: 32px 0;
   }
-}
-
-.icon-accordion {
-  transition: transform 0.45s ease-in-out;
-}
-.accordion-item.is-active .icon-accordion {
-  transform: rotate(180deg);
 }
 
 /* swiper */
