@@ -1,7 +1,7 @@
 .hero-section{
   background-image: image-set(
-    url('/img/hero-bg/hero-bg-mob.png'),
-    url('/img/hero-bg/hero-bg-mob@2x.png')
+    url('/img/hero-bg/hero-bg-1x.png'),
+    url('/img/hero-bg/hero-bg-2x.png')
   );
   background-size: cover;
   background-position: center;
@@ -14,10 +14,12 @@
 
 .hero-title {
     margin-right: auto;
+    font-family: var(--font-family);
     font-weight: 500;
     font-size: 50px;
     line-height: 1;
     letter-spacing: -0.03em;
+    color: var(--text-color);
     text-transform: uppercase;
     max-width: 343px;
     min-width: 327px;
@@ -32,17 +34,19 @@
   }                         
 
   .social-item {
-    border: 1px solid rgba(250, 250, 250, 0.2);
+    border: var(--border-light);
+    font-family: var(--font-family);
     border-radius: 50%;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: -0.02em;
     width: 37px;
     height: 37px;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease;
+    transition: var(--background-color) 450ms ease;
   }
 
   .social-item:last-child {
@@ -56,15 +60,11 @@
   .social-item:focus,
   .social-item:focus-visible,
   .social-item:active {
-  background-color: var(--button-text-color);
+  background-color: var(--fill-color);
 }
 
 @media only screen and (min-width: 768px) {
     .hero-section{
-        background-image: image-set(
-          url('/img/hero-bg/hero-bg-tablet.png') 1x,
-          url('/img/hero-bg/hero-bg-tablet@2x.png') 2x
-      );
         height: 1024px;
     }
 
@@ -95,10 +95,6 @@
   @media only screen and (min-width: 1440px) {
 
     .hero-section{
-      background-image: image-set(
-        url('/img/hero-bg/hero-bg-desktop.png') 1x,
-        url('/img/hero-bg/hero-bg-desktop@2x.png') 2x
-    );
     height: 900px;
   }                    
 
