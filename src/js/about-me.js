@@ -1,37 +1,14 @@
-import pathSprite from '../img/sprite.svg';
+import Accordion from 'accordion-js';
 
-const accordionItems = document.querySelectorAll('.accordion-item');
-
-const toggleAccordionContent = item => {
-  const content = item.querySelector('.accordion-content');
-  if (item.classList.contains('active')) {
-    content.style.maxHeight = content.scrollHeight + 'px';
-    content.style.opacity = '1';
-    content.style.transform = 'translateY(0)';
-  } else {
-    content.style.maxHeight = '0';
-    content.style.opacity = '0';
-    content.style.transform = 'translateY(-10px)';
-  }
-};
-
-accordionItems.forEach(item => {
-  const header = item.querySelector('.accordion-header');
-
-  header.addEventListener('click', () => {
-    item.classList.toggle('active');
-    toggleAccordionContent(item);
-
-    const icon = header.querySelector('svg use');
-    icon.setAttribute(
-      'href',
-      item.classList.contains('active')
-        ? `${pathSprite}#icon-arrow-up`
-        : `${pathSprite}#icon-arrow-down`
-    );
+document.addEventListener('DOMContentLoaded', function () {
+  new Accordion('.accordion-container', {
+    duration: 450,
+    showFirstItem: true,
+    showMultiple: true,
+    elementClass: 'accordion-item',
+    triggerClass: 'accordion-header',
+    panelClass: 'accordion-content',
   });
-
-  toggleAccordionContent(item);
 });
 
 // Swiper

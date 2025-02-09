@@ -1,18 +1,18 @@
 /* .about-me */
 
 .about-me {
-  padding: 64px 16px;
+  padding: 64px 0px;
 }
 
 @media (min-width: 768px) {
   .about-me {
-    padding: 64px 32px;
+    padding: 64px 0px;
   }
 }
 
 @media (min-width: 1440px) {
   .about-me {
-    padding: 96px 32px;
+    padding: 96px px;
   }
 }
 
@@ -31,7 +31,7 @@
   .text-image {
     text-align: left;
     max-width: 786px;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
 }
 
@@ -39,7 +39,7 @@
   .text-image {
     flex-direction: row;
     max-width: 1376px;
-    margin-bottom: 96px;
+    margin-bottom: 64px;
   }
 }
 
@@ -119,7 +119,19 @@
   }
 }
 
-/* .accordion */
+/* accordion */
+
+.accordion-container {
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-item {
+  position: relative;
+  padding: 20px 0;
+  border-bottom: 2px var(--border-light);
+}
+
 .accordion-header {
   display: flex;
   justify-content: space-between;
@@ -132,9 +144,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.02em;
-  text-transform: uppercase;
   color: var(--title-color);
-  transition: 450ms ease;
 }
 
 .icon-container {
@@ -143,13 +153,6 @@
   padding: 9px;
   width: 36px;
   height: 36px;
-  transform: rotate(-180deg);
-  transition: 450ms ease;
-}
-
-.icon-accordion {
-  width: 18px;
-  height: 18px;
 }
 
 .accordion-content {
@@ -160,18 +163,11 @@
   letter-spacing: -0.02em;
   color: var(--text-color);
   gap: 32px;
+  display: flex;
   flex-direction: column;
-  margin-top: 12px;
-  max-height: 0;
   overflow: hidden;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: max-height 0.45s ease, opacity 0.45s ease, transform 0.45s ease;
-}
-
-.accordion-item {
-  position: relative;
-  padding: 20px 0;
+  max-height: 1000px;
+  transition: max-height 0.45s ease-in-out;
 }
 
 .accordion-item::after {
@@ -218,6 +214,13 @@
   }
 }
 
+.icon-accordion {
+  transition: transform 0.45s ease-in-out;
+}
+.accordion-item.is-active .icon-accordion {
+  transform: rotate(180deg);
+}
+
 /* swiper */
 .skills-container {
   margin-top: 32px;
@@ -243,7 +246,6 @@
   text-align: center;
   align-content: center;
   line-height: 130px;
-  transition: 450ms ease;
 }
 
 .skills-item.active {
@@ -257,6 +259,7 @@
 
 .skills-but {
   stroke: var(--accent-color);
+  fill: none;
 }
 
 @media (width: 320px) {
@@ -266,6 +269,10 @@
 }
 
 @media (min-width: 768px) {
+  .skills-container {
+    margin-top: 64px;
+  }
+
   .skills-swiper {
     max-width: 600px;
     height: 200px;
@@ -278,7 +285,8 @@
 
 @media (min-width: 1440px) {
   .skills-container {
-    margin: 96px 32px;
+    margin-top: 96px;
+    padding: 0 32px;
     gap: 72px;
   }
   .skills-swiper {
