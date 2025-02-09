@@ -154,11 +154,15 @@
   line-height: 150%;
   letter-spacing: -0.02em;
   color: var(--text-color);
-  gap: 32px;
+  gap: 10px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   padding-top: 12px;
+}
+
+.accord-content {
+  gap: 32px;
 }
 
 .accordion-item::after {
@@ -173,7 +177,7 @@
 }
 
 @media (min-width: 768px) {
-  .accordion-content {
+  .accord-content {
     gap: 16px;
   }
 
@@ -193,8 +197,10 @@
 }
 
 @media (min-width: 1440px) {
-  .accordion-content {
+  .accord-content {
     gap: 32px;
+  }
+  .accordion-content {
     padding-left: 696px;
     padding-right: 68px;
   }
