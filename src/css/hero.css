@@ -5,15 +5,21 @@
   );
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+}
+
+.social-network {
   height: 812px;
   display: flex;
   align-items: center;
-  justify-content: center;
   position: relative;
 }
 
 .hero-title {
-    margin-right: auto;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 50px;
@@ -21,13 +27,10 @@
     letter-spacing: -0.03em;
     color: var(--text-color);
     text-transform: uppercase;
-    max-width: 343px;
-    min-width: 327px;
   }
 
   .social-link {
     position: absolute;
-    right: 16px;
     bottom: 32px;
     display: flex;
     gap: 4px;
@@ -68,6 +71,11 @@
         height: 1024px;
     }
 
+    .social-network {
+      width: 100%;
+      height: 100%;
+    }
+
     .hero-title {
       font-size: 90px;
       max-width: 632px;
@@ -75,8 +83,8 @@
     }
   
     .social-link {
-      right: 32px;
       gap: 8px;
+      right: 32px;
     }
 
     .social-item {
