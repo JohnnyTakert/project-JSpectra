@@ -1,7 +1,7 @@
 .hero-section{
   background-image: image-set(
-    url('/src/img/hero-bg/hero@1x.png'),
-    url('/src/img/hero-bg/hero@2x.png')
+      url('/img/hero-bg/hero-bg.jpg') 1x,
+      url('/img/hero-bg/hero-bg@2x.jpg') 2x
   );
   background-size: cover;
   background-position: center;
@@ -34,7 +34,7 @@
   }                         
 
   .social-item {
-    border: var(--border-light);
+    border: 1px solid var(--border-light);
     font-family: var(--font-family);
     border-radius: 50%;
     font-weight: 500;
