@@ -72,6 +72,7 @@
 @media only screen and (min-width: 768px) {
   .benefits__list {
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 64px;
   }
 }
 
@@ -94,6 +95,7 @@
   .benefits__list {
     grid-template-columns: repeat(2, max-content);
     justify-content: end;
+    margin-bottom: 64px;
   }
 
   .benefits__button__box {
