@@ -92,6 +92,24 @@ fill: none;
     stroke: #3b3b3b;
 }
 
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background:#fafafa;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 @media only screen and (min-width: 768px) {
     .buttons {
         gap: 20px;
