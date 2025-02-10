@@ -44,19 +44,34 @@ async function onFormSubmit(e) {
   }
 }
 
+let position = null;
+
 function openModal() {
+  position = window.scrollY;
   refs.modalEl.classList.add('is-open');
-  document.body.style.overflow = 'hidden';
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${position}px`;
+  document.body.style.width = '100%';
 }
 
 function closeModal() {
   refs.modalEl.classList.remove('is-open');
-  document.body.style.overflow = '';
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+
+  window.scrollTo({
+    top: position,
+    left: 0,
+    behavior: 'instant',
+  });
 }
 
 refs.formEl.addEventListener('submit', onFormSubmit);
 refs.closeModalBtn.addEventListener('click', closeModal);
-refs.modalEl.addEventListener('click', closeModal);
+refs.modalEl.addEventListener('click', e => {
+  if (e.target === refs.modalEl) closeModal();
+});
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
 });
