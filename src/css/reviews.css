@@ -4,7 +4,7 @@ font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.02em;
-    color: rgba(250, 250, 250, 0.4);
+    color: var(--title-color);
     margin-bottom: 32px;
 }
 
@@ -17,30 +17,30 @@ font-weight: 600;
 
 .reviews-swiper-btn-prev,
 .reviews-swiper-btn-next {
-    border: 1px solid rgba(250, 250, 250, 0.5);
+    border: 1px solid var(--title-color);
         border-radius: 60px;
         padding: 14px;
         width: 52px;
         height: 52px;
-        background-color: #242527;
+        background-color: var(--gradient-color);
 }
 
 
 .button-icon {
 fill: none;
-    stroke: #fafafa;
+    stroke: var(--text-color);
 }
 
 .not-found {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    color: #777;
+    color: var(--title-color);
     padding: 20px;
 }
 
 .reviews-section-swiper-slide {
-    border: 1px solid rgba(250, 250, 250, 0.2);
+    border: 1px solid var(--border-light);
     border-radius: 20px;
     padding: 32px 24px;
     max-width: 344px;
@@ -68,7 +68,7 @@ fill: none;
     font-size: 20px;
     line-height: 1.5;
     letter-spacing: -0.02em;
-    color: #fafafa;
+    color: var(--text-color);
     margin-bottom: 8px;
 }
 
@@ -77,19 +77,19 @@ fill: none;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.02em;
-    color: rgba(250, 250, 250, 0.6);
+    color: var(--text-color2);
 }
 
 .reviews-swiper-btn-prev:disabled,
 .reviews-swiper-btn-next:disabled {
-    border: 1px solid rgba(250, 250, 250, 0.2);
+    border: 1px solid var(--border-light);
     cursor: not-allowed;
 }
 
 
 .reviews-swiper-btn-prev:disabled .button-icon,
 .reviews-swiper-btn-next:disabled .button-icon {
-    stroke: #3b3b3b;
+    stroke: var(--accent-color);
 }
 
 ::-webkit-scrollbar {
@@ -97,17 +97,17 @@ fill: none;
 }
 
 ::-webkit-scrollbar-track {
-    background:#fafafa;
+    background: var(--scroll-background-color);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: var(--scroll-background2-color);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: var(--scroll-background3-color);
 }
 
 @media only screen and (min-width: 768px) {
