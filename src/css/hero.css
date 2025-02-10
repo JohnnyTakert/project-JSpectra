@@ -1,7 +1,7 @@
 .hero-section{
   background-image: image-set(
-      url('/img/hero-bg/hero-bg.jpg') 1x,
-      url('/img/hero-bg/hero-bg@2x.jpg') 2x
+      url('/img/hero-bg/hero-bg.webp') 1x,
+      url('/img/hero-bg/hero-bg@2x.webp') 2x
   );
   background-size: cover;
   background-position: center;
