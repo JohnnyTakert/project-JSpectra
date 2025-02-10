@@ -13,7 +13,6 @@
   --scroll-background2-color: #888;
   --scroll-background3-color: #555;
 }
-}
 
 body {
   background-color: var(--background-color);
