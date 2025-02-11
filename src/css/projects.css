@@ -112,14 +112,25 @@
   margin-right: 12px;
 }
 
-.swiper-button-disabled {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
 .btn-icons {
   fill: none;
   stroke: var(--text-color);
+}
+
+/* .swiper-button-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+} */
+
+.swiper-button-prev:disabled,
+.swiper-button-next:disabled {
+  border: 1px solid var(--border-light);
+  cursor: not-allowed;
+}
+
+.swiper-button-prev:disabled .btn-icons,
+.swiper-button-next:disabled .btn-icons {
+  stroke: var(--accent-color);
 }
 
 @media only screen and (min-width: 768px) {
