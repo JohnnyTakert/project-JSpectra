@@ -28,25 +28,18 @@ const swiper = new Swiper('.swiper', {
 
 // Перевірка на початок і кінець слайдера
 
-const prevButton = document.querySelector('.swiper-button-prev');
-const nextButton = document.querySelector('.swiper-button-next');
-
 function updateButtons(swiper) {
+  const prevButton = document.querySelector('.swiper-button-prev');
+  const nextButton = document.querySelector('.swiper-button-next');
   if (swiper.isBeginning) {
-    prevButton.classList.add('disabled');
     prevButton.setAttribute('disabled', true);
   } else {
-    prevButton.classList.remove('disabled');
     prevButton.removeAttribute('disabled');
   }
 
   if (swiper.isEnd) {
-    nextButton.classList.add('disabled');
     nextButton.setAttribute('disabled', true);
   } else {
-    nextButton.classList.remove('disabled');
     nextButton.removeAttribute('disabled');
   }
 }
-
-updateButtons(swiper);
