@@ -26,27 +26,24 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-// nextButton.addEventListener('click', function () {
-//   swiper.slideNext();
-// });
-
-// prevButton.addEventListener('click', function () {
-//   swiper.slidePrev();
-// });
-
 // Перевірка на початок і кінець слайдера
+//
 function updateButtons(swiper) {
   const prevButton = document.querySelector('.swiper-button-prev');
   const nextButton = document.querySelector('.swiper-button-next');
   if (swiper.isBeginning) {
-    prevButton.classList.add('swiper-button-disabled');
+    prevButton.classList.add('disabled');
+    prevButton.setAttribute('disabled', true);
   } else {
-    prevButton.classList.remove('swiper-button-disabled');
+    prevButton.classList.remove('disabled');
+    prevButton.removeAttribute('disabled');
   }
 
   if (swiper.isEnd) {
-    nextButton.classList.add('swiper-button-disabled');
+    nextButton.classList.add('disabled');
+    nextButton.setAttribute('disabled', true);
   } else {
-    nextButton.classList.remove('swiper-button-disabled');
+    nextButton.classList.remove('disabled');
+    nextButton.removeAttribute('disabled');
   }
 }
