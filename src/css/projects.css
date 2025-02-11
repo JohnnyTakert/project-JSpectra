@@ -126,6 +126,7 @@
 .swiper-button-next:disabled {
   border: 1px solid var(--border-light);
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .swiper-button-prev:disabled .btn-icons,

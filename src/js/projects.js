@@ -27,10 +27,11 @@ const swiper = new Swiper('.swiper', {
 });
 
 // Перевірка на початок і кінець слайдера
-//
+
+const prevButton = document.querySelector('.swiper-button-prev');
+const nextButton = document.querySelector('.swiper-button-next');
+
 function updateButtons(swiper) {
-  const prevButton = document.querySelector('.swiper-button-prev');
-  const nextButton = document.querySelector('.swiper-button-next');
   if (swiper.isBeginning) {
     prevButton.classList.add('disabled');
     prevButton.setAttribute('disabled', true);
@@ -47,3 +48,5 @@ function updateButtons(swiper) {
     nextButton.removeAttribute('disabled');
   }
 }
+
+updateButtons(swiper);
