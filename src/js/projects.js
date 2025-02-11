@@ -47,3 +47,5 @@ function updateButtons(swiper) {
     nextButton.removeAttribute('disabled');
   }
 }
+
+updateButtons(swiper);
