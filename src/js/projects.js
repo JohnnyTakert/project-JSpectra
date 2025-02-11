@@ -2,13 +2,13 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.projects-section .swiper', {
   modules: [Navigation],
   slidesPerView: 1,
   spaceBetween: 0,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.projects-swiper-button-next',
+    prevEl: '.projects-swiper-button-prev',
   },
   keyboard: {
     enabled: true,
@@ -28,10 +28,9 @@ const swiper = new Swiper('.swiper', {
 
 // Перевірка на початок і кінець слайдера
 
-const prevButton = document.querySelector('.swiper-button-prev');
-const nextButton = document.querySelector('.swiper-button-next');
-
 function updateButtons(swiper) {
+  const prevButton = document.querySelector('.projects-swiper-button-prev');
+  const nextButton = document.querySelector('.projects-swiper-button-next');
   if (swiper.isBeginning) {
     prevButton.classList.add('disabled');
     prevButton.setAttribute('disabled', true);
@@ -48,5 +47,3 @@ function updateButtons(swiper) {
     nextButton.removeAttribute('disabled');
   }
 }
-
-updateButtons(swiper);
