@@ -122,15 +122,15 @@
   pointer-events: none;
 } */
 
-.swiper-button-prev:disabled,
-.swiper-button-next:disabled {
+.projects-swiper-button-prev:disabled,
+.projects-swiper-button-next:disabled {
   border: 1px solid var(--border-light);
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.swiper-button-prev:disabled .btn-icons,
-.swiper-button-next:disabled .btn-icons {
+.projects-swiper-button-prev:disabled .btn-icons,
+.projects-swiper-button-next:disabled .btn-icons {
   stroke: var(--accent-color);
 }
 
